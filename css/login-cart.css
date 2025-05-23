@@ -1,0 +1,402 @@
+/* Header ikonok és dropdown menük */
+.header-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header-icon {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 16px;
+    margin-left: 15px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.header-icon:hover {
+    color: var(--primary-color);
+}
+
+.header-icon i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.status-text {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Dropdown menük */
+.user-account-wrapper,
+.cart-wrapper {
+    position: relative;
+}
+
+.user-account-dropdown,
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1001;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: none;
+    margin-top: 10px;
+}
+
+/* Login/Register tabs */
+.login-register-tabs .tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.login-register-tabs .tab-button {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #777;
+    border-bottom: 2px solid transparent;
+}
+
+.login-register-tabs .tab-button.active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.login-register-tabs .tab-content {
+    display: none;
+}
+
+.login-register-tabs .tab-content.active {
+    display: block;
+}
+
+/* Form styles */
+.ajax-auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.ajax-auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.ajax-auth-form input[type="text"],
+.ajax-auth-form input[type="email"],
+.ajax-auth-form input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.ajax-auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ajax-auth-form button:hover {
+    background-color: #e55f00;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.lost-password {
+    font-size: 13px;
+    text-align: right;
+}
+
+.lost-password a {
+    color: #777;
+    text-decoration: none;
+}
+
+.lost-password a:hover {
+    color: var(--primary-color);
+}
+
+/* Logged in user */
+.user-info .user-greeting {
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-menu li {
+    margin-bottom: 8px;
+}
+
+.user-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+.user-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Egységes kosár dropdown stílus */
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+
+/* Terméklista konténer */
+.cart-items {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+/* Terméklista elemek */
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+}
+
+/* Termékképek */
+.mini-cart-item .product-image {
+    margin-right: 15px;
+}
+
+.mini-cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Termék információk */
+.mini-cart-item .product-info {
+    flex: 1;
+}
+
+.mini-cart-item .product-name {
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding-right: 20px;
+    font-size: 16px;
+}
+
+.mini-cart-item .product-name:hover {
+    color: #ff7518;
+}
+
+/* Mennyiség és ár */
+.mini-cart-item .quantity-price {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+.mini-cart-item .price {
+    color: #ff7518;
+    font-weight: 600;
+        font-size: 20px;
+}
+
+/* Eltávolítás gomb */
+.mini-cart-item .remove-item {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-cart-item .remove-item:hover {
+    color: #ff6b6b;
+    background-color: #f9f9f9;
+}
+
+/* Összesítés rész */
+.cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.cart-subtotal .subtotal-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-subtotal .subtotal-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff7518;
+}
+
+/* Gomb konténer */
+.cart-actions {
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+}
+
+/* Gombok */
+.cart-button {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.view-cart {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.view-cart:hover {
+    background-color: #e5e5e5;
+}
+
+.checkout {
+    background-color: #ff7518;
+    color: #797474;
+}
+
+.checkout:hover {
+    background-color: #e56b10;
+}
+
+/* Üres kosár stílus */
+.empty-cart-message {
+    padding: 30px 15px;
+    text-align: center;
+    color: #666;
+}
+
+.return-to-shop {
+    padding: 0 15px 20px;
+    text-align: center;
+}
+
+.return-to-shop .button {
+    display: inline-block;
+    background-color: #ff7518;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.return-to-shop .button:hover {
+    background-color: #e56b10;
+}
+
+/* Scrollbar stílus */
+.cart-items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Animáció */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cart-dropdown.visible {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
